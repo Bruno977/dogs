@@ -1,13 +1,12 @@
-import React from "react";
-import { PHOTO_GET } from "../../api";
-import useFetch from "../../Hooks/useFetch";
-import Error from "../Helper/Error";
-import Loading from "../Helper/Loading";
-import PhotoContent from "../Photo/PhotoContent";
+import React from 'react';
+import styles from './FeedModal.module.css';
+import useFetch from '../../Hooks/useFetch';
+import Error from '../Helper/Error';
+import Loading from '../Helper/Loading';
+import { PHOTO_GET } from '../../Api';
+import PhotoContent from '../Photo/PhotoContent';
 
-import styles from "./FeedModal.module.css";
-
-function FeedModal({ photo, setModalPhoto }) {
+const FeedModal = ({ photo, setModalPhoto }) => {
   const { data, error, loading, request } = useFetch();
 
   React.useEffect(() => {
@@ -26,6 +25,6 @@ function FeedModal({ photo, setModalPhoto }) {
       {data && <PhotoContent data={data} />}
     </div>
   );
-}
+};
 
 export default FeedModal;

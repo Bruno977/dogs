@@ -1,10 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import PhotoComments from "./PhotoComments";
+import React from 'react';
+import styles from './PhotoContent.module.css';
+import { Link } from 'react-router-dom';
+import PhotoComments from './PhotoComments';
 
-import styles from "./PhotoContent.module.css";
-
-function PhotoContent({ data }) {
+const PhotoContent = ({ data }) => {
   const { photo, comments } = data;
   return (
     <div className={styles.photo}>
@@ -14,7 +13,7 @@ function PhotoContent({ data }) {
       <div className={styles.details}>
         <div>
           <p className={styles.author}>
-            <Link to={`/perfil/${photo.author}`}> @{photo.author}</Link>
+            <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
           <h1 className="title">
@@ -29,6 +28,6 @@ function PhotoContent({ data }) {
       <PhotoComments id={photo.id} comments={comments} />
     </div>
   );
-}
+};
 
 export default PhotoContent;

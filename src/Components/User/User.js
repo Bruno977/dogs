@@ -1,11 +1,11 @@
-import React from "react";
-import UserHeader from "./UserHeader";
-import { Routes, Route } from "react-router-dom";
-import Feed from "../Feed/Feed";
-import UserPhotoPost from "./UserPhotoPost";
-import UserStats from "./UserStats";
+import React from 'react';
+import UserHeader from './UserHeader';
+import { Routes, Route } from 'react-router-dom';
+import Feed from '../Feed/Feed';
+import UserPhotoPost from './UserPhotoPost';
+import UserStats from './UserStats';
 
-function User() {
+const User = () => {
   return (
     <section className="container">
       <UserHeader />
@@ -16,6 +16,6 @@ function User() {
       </Routes>
     </section>
   );
-}
+};
 
 export default User;

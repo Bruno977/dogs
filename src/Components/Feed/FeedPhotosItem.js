@@ -1,8 +1,7 @@
-import React from "react";
+import React from 'react';
+import styles from './FeedPhotosItem.module.css';
 
-import styles from "./FeedPhotosItem.module.css";
-
-function FeedPhotosItem({ photo, setModalPhoto }) {
+const FeedPhotosItem = ({ photo, setModalPhoto }) => {
   function handleClick() {
     setModalPhoto(photo);
   }
@@ -12,6 +11,6 @@ function FeedPhotosItem({ photo, setModalPhoto }) {
       <span className={styles.visualizacao}>{photo.acessos}</span>
     </li>
   );
-}
+};
 
 export default FeedPhotosItem;
