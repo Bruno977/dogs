@@ -1,6 +1,7 @@
-import React from "react";
-import styles from "./Image.module.css";
-function Image({ alt, ...props }) {
+import React from 'react';
+import styles from './Image.module.css';
+
+const Image = ({ alt, ...props }) => {
   const [skeleton, setSkeleton] = React.useState(true);
 
   function handleLoad({ target }) {
@@ -14,6 +15,6 @@ function Image({ alt, ...props }) {
       <img onLoad={handleLoad} className={styles.img} alt={alt} {...props} />
     </div>
   );
-}
+};
 
 export default Image;
